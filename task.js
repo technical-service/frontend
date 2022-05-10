@@ -115,6 +115,6 @@ router.delete("/tasks/:id", auth, async (req, res) => {
 
 module.exports = router;
 
-// const tasks = await Task.find({ owner: req.user._id });
-// res.send(tasks);
-// await req.user.populate("tasks").execPopulate();  // In latest mongo version, populate method will do the job there is no need of execPopulate
+const tasks = await Task.find({ owner: req.user._id });
+res.send(tasks);
+await req.user.populate("tasks").execPopulate();  // In latest mongo version, populate method will do the job there is no need of execPopulate
