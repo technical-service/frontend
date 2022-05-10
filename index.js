@@ -4,7 +4,7 @@ const userRouter = require("./routers/user");
 const taskRouter = require("./routers/task");
 
 const app = express();
-// Assign the 3000 port for run the application
+// Assign the 3000 port for run
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
